@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>STUPID COACHING</h1>
+
+  <%= link_to 'Ask again', ask_path %>
+  <div class="text-block">
+    <p><%= params[:question] %></p>
+    <p>-You</p>
+  </div>
+  <br>
+  <div class="text-block">
+    <% if params[:question] == 'I am going to work' %>
+      <p>Great!</p>
+    <% elsif params[:question][-1] == '?' %>
+      <p><strong>Silly question, get dressed and go to work!</strong></p>
+    <% else %>
+      <p><strong>I don't care, get dressed and go to work!</strong></p>
+    <% end %>
+    <p>-Your coach</p>
+  </div>
+</div>
